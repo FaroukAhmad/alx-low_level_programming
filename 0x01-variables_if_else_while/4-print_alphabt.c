@@ -2,9 +2,9 @@
 /**
  * main - Entry point
  *
- * return: Always 0 (succes)
+ * Return: Always 0 (success)
 */
-int main()
+int main(void)
 {
 	char ch;
 
