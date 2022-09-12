@@ -4,7 +4,7 @@
  *
  * return: Always 0 (succes)
 */
-int main(void)
+int main()
 {
 	char ch;
 
