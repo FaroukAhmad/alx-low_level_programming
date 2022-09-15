@@ -5,8 +5,8 @@
  * @a: one of the integers
  * @b: one of the integers
  *
- * return: 0
-*/
+ * return: product of both integers
+**/
 int mul(int a, int b)
 {
 	return (a * b);
