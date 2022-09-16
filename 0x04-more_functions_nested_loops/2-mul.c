@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * mul - function that returns multiplication of two integers
  *
@@ -7,6 +8,7 @@
  *
  * return: product of both integers
 **/
+
 int mul(int a, int b)
 {
 	return (a * b);
