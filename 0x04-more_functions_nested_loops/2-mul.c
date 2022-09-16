@@ -1,7 +1,6 @@
 #include "main.h"
 
 /**
- *
  * mul - functions that multiply two given integers
  *
  * @a: first integer
