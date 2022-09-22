@@ -2,54 +2,28 @@
 #include <stddef.h>
 #include <stdio.h>
 /**
- * upper - capitalizes a letter if it is lowercase
- * @c: pointer to a string
- * Return: pointer to string
+ * cap_string - capitalizes all words of a string
+ * @s: pointer to a string
+ * Return: the pointer to dest
 */
-char *upper(char *c)
+char *cap_string(char *s)
 {
-	if (c[0] >= 'a' && c[0] <= 'z')
-		c[0] -= 32;
-	return (c);
-}
-/**
- * new_word - compares char to chars that indicate a new word
- * @c: char to check
- * Return: 1 if char is a word separator, 0 of not
-*/
-int new_word(char c)
-{
-	int i = 0;
-	char *word = " \t\n,;.!?\"(){}";
+	int count = 0, i;
+	int sep_words[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	while (word[i] != '\0')
+	if (*(s + count) >= 97 && *(s + count) <= 122)
+		*(s + count) = *(s + count) - 32;
+	count++;
+	while (*(s + count) != '\0')
 	{
-		if (c == word[i])
-			return (i);
-		i++;
-	}
-	return (0);
-}
-/**
- * cap_string - capitalize all words in a string
- * @str: string to modify
- * Return: pointer to str
-*/
-char *cap_string(char *str)
-{
-	int i;
-
-	if (str == NULL)
-		return (NULL);
-	upper(str);
-	if (str[0] == '\0')
-		return (str);
-	for (i = 1; str[i] != '\0'; i++)
-	{
-		if (new_word(str[i - 1]) == 1)
+		for (i = 0; i < 13; i++)
 		{
-			upper(&str[i]);
+			if ((*(s + (count + 1)) >= 97) && (*(s + (count + 1)) <= 122))
+				*(s + (count + 1)) = *(s + (count + 1)) - 32;
+			break;
 		}
+		count++;
 	}
-	return (str);
+	return (s);
 }
+
