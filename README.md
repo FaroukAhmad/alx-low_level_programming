@@ -1,2 +1,1 @@
-# alx-low_level_programming
-this repository contains the basics of c programming such as loops, conditional statements, function etc.
+0. Object-like Macro Create a header file that defines a macro named SIZE as an abbreviation for the token 1024.
