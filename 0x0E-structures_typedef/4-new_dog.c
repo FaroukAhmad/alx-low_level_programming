@@ -10,9 +10,10 @@
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char hobbes = '\n';
+	dog_t *my_dog;
 
-	if (hobbes == NULL)
+	my_dog = new_dog("Poppy", 3.5, "Bob");
+	if (my_dog == NULL)
 		return (NULL);
-	return (hobbes);
+	return (my_dog);
 }
